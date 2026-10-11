@@ -5,7 +5,6 @@ export const testimonials = [
     description:
       'I am using \@Podman_io for Magento 2 and it is super fast than other container tools. You must try it. #Podman #Magento #magento2',
     social: 'twitter',
-    path: 'https://twitter.com/mrananthiyer/status/1681923271267319810',
     date: 'Jul 20, 2023',
     avatar: 'https://pbs.twimg.com/profile_images/1421078758707011593/yYD_EI3K_400x400.jpg',
   },
@@ -18,7 +17,6 @@ export const testimonials = [
     path: 'https://twitter.com/yanashin18618/status/1672012788951289857',
     date: 'Jun 22, 2023',
     avatar: 'https://pbs.twimg.com/profile_images/1460075843888480256/oLLVLho5_400x400.jpg',
-    featuredlink: 'https://twitter.com/vitalethomas/status/1671985089675247618',
   },
   {
     name: 'Fang-Pen Lin 🇺🇸🌈',

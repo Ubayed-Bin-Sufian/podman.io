@@ -6,7 +6,7 @@ type TestimonialProps = {
   handle: string;
   description: string;
   social: string;
-  path: string;
+  path?: string;
   date: string;
   avatar: string;
   featuredlink?: string;
@@ -55,11 +55,15 @@ function Testimonial(props: TestimonialProps) {
             <h3 className="text-lg font-bold">{props.name}</h3>
             <Icon icon={`logos:${props.social}`} className="text-2xl" />
           </div>
-          <a
-            href={props.path}
-            className="text-gray-700 no-underline hover:bg-purple-300 hover:no-underline dark:text-gray-100 dark:hover:text-purple-900">
-            {props.handle}
-          </a>
+          {props.path ? (
+            <a
+              href={props.path}
+              className="text-gray-700 no-underline hover:bg-purple-300 hover:no-underline dark:text-gray-100 dark:hover:text-purple-900">
+              {props.handle}
+            </a>
+          ) : (
+            <span className="text-gray-700 dark:text-gray-100">{props.handle}</span>
+          )}
         </div>
         <div className="order-first shrink-0">
           <Avatar src={props.avatar} name={props.name} />
@@ -74,11 +78,15 @@ function Testimonial(props: TestimonialProps) {
         )}
       </div>
       <div className="mt-auto self-start italic text-gray-300 dark:text-gray-700">
-        <a
-          href={props.path}
-          className="text-gray-300 no-underline hover:bg-purple-300 hover:no-underline dark:text-gray-700 dark:hover:text-gray-700">
-          {props.date}
-        </a>
+        {props.path ? (
+          <a
+            href={props.path}
+            className="text-gray-300 no-underline hover:bg-purple-300 hover:no-underline dark:text-gray-700 dark:hover:text-gray-700">
+            {props.date}
+          </a>
+        ) : (
+          <span>{props.date}</span>
+        )}
       </div>
     </article>
   );
